@@ -1,0 +1,678 @@
+@charset "utf-8";
+
+@import "fonts.scss";
+
+$f6color:#ffffff;
+$b0color: #b0b0b0;
+$blackcolor:#333333;
+$topspancolor:#424242;
+$micolor:#ff6700;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin spanremove {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin conter {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 1226px;
+}
+
+@mixin top-a {
+    color: $b0color;
+    line-height: 40px;
+    display: inline-block;
+
+    &:hover {
+        color: $f6color;
+    }
+}
+
+@mixin mi-ind {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+// 顶部导航栏样式开始
+
+.topconter,
+.topnav {
+    background-color: $blackcolor;
+}
+
+.topconter {
+    @include conter;
+}
+
+.topnav {
+    height: 40px;
+    @include spanremove;
+    position: relative;
+}
+
+.topnav {
+    font-size: 12px;
+
+    a {
+        @include top-a;
+    }
+
+    span {
+        color: $topspancolor;
+        margin: 0 0.3em;
+    }
+
+    .topleftdow {
+        position: relative;
+        z-index: 9999;
+
+        &:hover>.appcode {
+            height: 148px;
+            z-index: 999;
+        }
+
+        &:hover::before {
+            display: block;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -8px;
+            border-width: 0 8px 8px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
+            display: none;
+        }
+
+        // 二维码
+        >.appcode {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 124px;
+            height: 0px;
+            transition: 0.3s ease;
+            font-size: 14px;
+            text-align: center;
+            background: $f6color;
+            top: 40px;
+            left: 50%;
+            margin-left: -62px;
+            box-shadow: 0 1px 5px #aaa;
+            line-height: 1;
+            overflow: hidden;
+
+            img {
+                width: 90px;
+                margin: 0 auto;
+                margin: 18px auto 12px;
+            }
+        }
+    }
+}
+
+// 头部购物车模块
+.topshopcart {
+    width: 120px;
+    height: 40px;
+    margin-left: 15px;
+    position: relative;
+    z-index: 9999;
+
+    >.tsvartup {
+        position: relative;
+        background-color: $topspancolor;
+        transition: 0.2s;
+        z-index: 32;
+        line-height: 40px;
+        
+
+        >.icon-cart::before {
+            font-family: 'icomoon';
+            color: $b0color;
+            font-size: 18px;
+            content: "\e93a";
+        }
+    }
+
+    >.tsvartut {
+        position: absolute;
+        width: 316px;
+        overflow: hidden;
+        right: 0;
+        height: 0px;
+        transition: 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        background-color: white;
+        z-index: 105;
+
+        >p {
+            line-height: 100px;
+        }
+    }
+
+    .tsvartup:hover {
+        background-color: white;
+
+        +.tsvartut {
+            height: 100px;
+        }
+
+        a {
+            color: $micolor;
+        }
+
+        >.icon-cart::before {
+            color: $micolor;
+        }
+    }
+}
+
+// 顶部导航栏样式结束
+
+// 头部导航栏样式开始
+
+.headerbav,
+.hdmilogo {
+    height: 100px;
+}
+
+.headerbav {
+    @include spanremove;
+    z-index: 102;
+}
+
+.hdconter {
+    @include conter;
+    position: relative;
+}
+
+.hdmilogo {
+    img {
+        width: 56px;
+        height: 56px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.kkkkk {
+    z-index: 249999;
+    width: 100%;
+}
+
+.hdnavlist {
+    position: absolute;
+    left: 234px;
+    height: 100px;
+
+    >ul li {
+        display: block;
+        float: left;
+        line-height: 100px;
+        padding: 0 10px;
+
+        >a {
+            color: $blackcolor;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $micolor;
+            }
+        }
+    }
+}
+
+.hdinput {
+    .inputcase {
+        width: 243px;
+        height: 48px;
+        padding: 0 10px;
+        outline: 0;
+        font-size: 14px;
+        line-height: 48px;
+        border: 1px solid #e0e0e0;
+        transition: border-color 0.2s;
+        border-right: 0;
+    }
+
+    .inputone {
+        width: 295px;
+        height: 48px;
+        font-size: 14px;
+
+        &:hover .inputcase,
+        &:hover .inputsearch {
+            border-color: $b0color;
+        }
+
+        .caselist {
+            border: 1px solid $micolor;
+            border-top: 0;
+            background-color: $f6color;
+            width: 244px;
+            overflow: hidden;
+            display: none;
+            top: 48px;
+            z-index: 999;
+
+            ul li {
+                display: inline;
+                font-size: 12px;
+                padding: 6px 15px;
+            }
+        }
+    }
+
+    .inputsearch {
+        border: 1px solid #e0e0e0;
+        width: 52px;
+        height: 48px;
+        font-size: 18px;
+        line-height: 24px;
+        background: #fff;
+        color: #616161;
+        outline: 0;
+        font-family: 'icomoon';
+        transition: border-color 0.2s;
+
+        &:hover {
+            border: 1px solid $micolor;
+            background: $micolor;
+            color: white;
+        }
+    }
+
+    .caselist {
+        width: 242px;
+    }
+
+}
+
+.hdinput .inputone .inputcase:focus,
+.hdinput .inputone .inputcase:focus~.inputsearch,
+.hdinput .inputone .inputcase:focus+.caselist {
+    border-color: $micolor;
+    display: block;
+}
+
+.appsearch .iptall .ipt1:focus,
+.appsearch .iptall .ipt1:focus+input {
+    border-color: #ff6700;
+}
+
+// 头部导航栏样式结束
+
+// 头部导航栏商品样式开始
+
+.hdplst {
+    position: absolute;
+    background-color: $f6color;
+    overflow: hidden;
+    display: block;
+    transition: 0.2s;
+    height: 0;
+    transition: box-shadow 0.2s, height 0.3s;
+    z-index: 99;
+}
+
+.hdconter:hover~.hdplst {
+    height: 229px;
+    display: block;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+}
+
+.hdplconter {
+    position: relative;
+    @include conter;
+    font-size: 12px;
+    text-align: center;
+
+    ul li {
+        position: relative;
+        float: left;
+        width: 204px;
+        padding: 35px 12px 0;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 35px;
+            z-index: 1;
+            width: 1px;
+            height: 100px;
+            content: "";
+            background-color: #e0e0e0;
+        }
+    }
+
+    .hplcfirst::before {
+        background-color: transparent;
+    }
+
+    .hdpimg {
+        width: 160px;
+        height: 110px;
+        margin: 0 auto 16px;
+
+        img {
+            width: 160px;
+            height: 110px;
+        }
+    }
+
+    .title {
+        line-height: 20px;
+        color: $blackcolor;
+    }
+
+    .price {
+        margin: 0;
+        line-height: 20px;
+        color: #ff6700;
+    }
+}
+
+// 头部导航栏商品样式结束
+
+// 头部轮播图样式开始
+.hdsfconter {
+    @include conter;
+    height: 460px;
+    position: relative;
+}
+
+.hdsfbgimg {
+    @include spanremove;
+    max-width: 1226px;
+
+    // 轮播图过渡效果
+    .carousel-fade .carousel-inner .carousel-item {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        transition-property: opacity;
+    }
+
+    .carousel-fade .carousel-inner .carousel-item,
+    .carousel-fade .carousel-inner .active.carousel-item-left,
+    .carousel-fade .carousel-inner .active.carousel-item-right {
+        opacity: 0;
+    }
+
+    .carousel-fade .carousel-inner .active,
+    .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
+    .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
+        opacity: 1;
+    }
+}
+
+.mi-ind {
+    position: absolute;
+    left: auto;
+    right: 30px;
+    bottom: 20px;
+
+    li {
+        @include mi-ind;
+        background: rgba(0, 0, 0, 0.4);
+        border-color: hsla(0, 0%, 100%, 0.3);
+    }
+
+    .active {
+        @include mi-ind;
+        border-color: rgba(0, 0, 0, .4);
+        background: hsla(0, 0%, 100%, 0.4);
+    }
+}
+
+
+@mixin ccpn{
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 41px;
+    height: 69px;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: rgba(#000000, 0.5);
+
+        >span {
+            color: $f6color;
+        }
+    }
+
+    >span {
+        font-family: 'icomoon';
+        font-size: 41px;
+        color: #d5d5d5;
+    }
+}
+
+.ccp {
+    left: 234px;
+    @include ccpn;
+}
+
+.ccn {
+    right: 0;
+    @include ccpn;    
+}
+
+.hdsfupall {
+    z-index: 98;
+    position: absolute;
+    top: 0;
+    height: 460px;
+}
+
+.hdsfmilist {
+    width: 234px;
+    border: 0;
+    color: #fff;
+    padding: 20px 0;
+    overflow: hidden;
+    background: rgba(105, 101, 101, .6);
+
+    ul li {
+        >a {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            padding-left: 30px;
+            height: 42px;
+            line-height: 42px;
+            color: #fff;
+            float: left;
+            position: relative;
+
+            &:hover {
+                background-color: $micolor;
+            }
+
+            span::before {
+                font-size: 20px;
+                position: absolute;
+                right: 20px;
+                font-family: 'icomoon';
+                content: "\e901";
+                color: #dedede;
+            }
+        }
+
+
+    }
+}
+
+.hdsfmilist:hover+.hdsfmlp {
+    display: block;
+}
+
+.hdsfmlp {
+    z-index: 10;
+    width: 992px;
+    word-break: normal;
+    font-size: 14px;
+    background: $f6color;
+    border: 1px solid #e0e0e0;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+
+    a {
+        display: block;
+        height: 76px;
+        padding: 18px 20px;
+        width: 247px;
+        padding: 18px 20px;
+        color: $blackcolor;
+        line-height: 40px;
+
+        &:hover {
+            color: $micolor;
+
+        }
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+        float: left;
+    }
+
+    span {
+        @include spanremove;
+        line-height: 40px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        float: left;
+    }
+}
+
+// 头部轮播图样式结束
+
+// 头部广告位样式开始
+
+.headsub {
+    margin-bottom: 26px;
+}
+
+.headsubconter {
+    @include conter;
+    margin-top: 14px;
+
+    &>div:nth-child(1) {
+        width: 234px;
+        height: 170px;
+    }
+
+    &>div:nth-child(n+2) {
+        width: 316px;
+        height: 170px;
+        transition: box-shadow .2s linear;
+
+        &:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.channel {
+    background-color: #5f5750;
+    margin: 0;
+    padding: 0;
+
+    ul li {
+        width: 78px;
+        height: 85px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        a {
+            display: block;
+            font-size: 12px;
+            color: $f6color;
+            opacity: 0.7;
+            margin: 0;
+            padding: 0;
+
+            &::before {
+                top: 3px;
+                left: 10px;
+                width: 64px;
+                height: 1px;
+                position: absolute;
+                content: "";
+                background: #665e57;
+                margin: 0;
+                padding: 0;
+            }
+
+            &::after {
+                top: 10px;
+                left: 3px;
+                width: 1px;
+                height: 70px;
+                position: absolute;
+                content: "";
+                background: #665e57;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &:hover {
+            a {
+                opacity: 1;
+            }
+        }
+    }
+
+    .icon-cart {
+        font-family: 'icomoon';
+        display: block;
+        font-size: 21px;
+    }
+}
+
+// 头部广告位样式结束
