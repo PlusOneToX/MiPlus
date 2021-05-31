@@ -337,7 +337,7 @@
         margin-bottom: 6px;
     }
 
-    p{
+    p {
         margin: 0;
         padding: 0;
     }
@@ -361,11 +361,11 @@
 
 }
 
-.bmon-icon-cart{
+.bmon-icon-cart {
     font-family: 'icomoon';
     font-size: 48px;
     color: $micolor;
-    padding-right:15px;
+    padding-right: 15px;
 }
 
 
@@ -374,7 +374,7 @@
     height: 80px;
 }
 
-.bmonepdlr{
+.bmonepdlr {
     padding: 0 6px;
 }
 
@@ -387,5 +387,54 @@
     &:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         transform: translate3d(0, -2px, 0);
+    }
+}
+
+.mivideo{
+    margin-bottom: 28px;
+}
+
+.videoli {
+    width: 296px;
+    height: 285px;
+    position: relative;
+    text-align: center;
+    width: 296px;
+    height: 285px;
+    text-align: center;
+    background: #fff;
+    transition: all .2s linear;
+
+    .videoimg {
+        img {
+            width: 296px;
+        }
+    }
+
+    .video-icon {
+        position: absolute;
+    }
+
+    .mv-title {
+        margin-bottom: 6px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: #333;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        margin-top: 28px;
+    }
+
+    .mv-smtitle {
+        height: 18px;
+        margin: 0 14px;
+        font-size: 12px;
+        color: #b0b0b0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
