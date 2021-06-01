@@ -607,4 +607,50 @@ ul {
     .ft-contact .follow .wx:hover img {
       display: block; }
 
+.footerlink {
+  background-color: #f5f5f5;
+  padding: 30px 0; }
+
+.footerlinkconter {
+  background: #f5f5f5;
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 1226px; }
+  .footerlinkconter .ftmilogo {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px; }
+  .footerlinkconter .info-text a {
+    color: #757575;
+    line-height: 18px;
+    font-size: 12px; }
+    .footerlinkconter .info-text a:hover {
+      color: #ff6700; }
+  .footerlinkconter .info-text span {
+    color: #b0b0b0;
+    line-height: 18px; }
+
+.info-textsm {
+  color: #b0b0b0;
+  font-size: 12px;
+  line-height: 24px; }
+  .info-textsm a {
+    color: #b0b0b0; }
+    .info-textsm a:hover {
+      color: #ff6700; }
+    .info-textsm a img {
+      height: 28px; }
+
+.ftimg {
+  padding-top: 12px;
+  background: #f5f5f5; }
+
+.ftimgconter {
+  background: #f5f5f5;
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 1226px;
+  text-align: center;
+  padding-bottom: 32px; }
+
 /*# sourceMappingURL=footer.css.map */

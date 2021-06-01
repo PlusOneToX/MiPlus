@@ -51,7 +51,7 @@
 .footer-links {
     width: 1226px;
     height: 252px;
-    padding-top:40px;
+    padding-top: 40px;
 
     .ft-nav {
         float: left;
@@ -155,4 +155,72 @@
 
 
     }
+}
+
+.footerlink {
+    background-color: #f5f5f5;
+    padding: 30px 0;
+}
+
+.footerlinkconter {
+    background: #f5f5f5;
+    @include conter;
+
+    .ftmilogo {
+        width: 56px;
+        height: 56px;
+        margin-right: 10px;
+    }
+
+    .info-text {
+
+        a {
+            color: #757575;
+            line-height: 18px;
+            font-size: 12px;
+
+            &:hover {
+                color: $micolor;
+            }
+        }
+
+        span {
+            color: #b0b0b0;
+            line-height: 18px;
+        }
+
+    }
+}
+
+.info-textsm {
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 24px;
+
+    a {
+        color: #b0b0b0;
+
+        &:hover {
+            color: $micolor;
+        }
+
+        img {
+            height: 28px;
+        }
+    }
+
+}
+
+
+.ftimg {
+    padding-top: 12px;
+    background: #f5f5f5;    
+}
+
+
+.ftimgconter {
+    background: #f5f5f5;
+    @include conter;
+    text-align: center;
+    padding-bottom: 32px;
 }

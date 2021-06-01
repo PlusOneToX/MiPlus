@@ -530,13 +530,7 @@ ul {
 .mainseeMore .seeMore {
   font-size: 16px;
   line-height: 58px;
-  color: #424242;
-  transition: all .4s; }
-.mainseeMore:hover .main-icon-cart {
-  background: #ff6700; }
-.mainseeMore:hover .seeMore {
-  color: #ff6700;
-  border: 0; }
+  color: #424242; }
 
 .maintitle {
   display: block;
@@ -713,6 +707,14 @@ ul {
 .mainseeMore span:hover {
   color: #ff6700;
   border-bottom: 2px solid #ff6700; }
+.mainseeMore:hover .main-icon-cart {
+  color: white;
+  background: #ff6700;
+  border-bottom: 0; }
+.mainseeMore:hover .seeMoretext {
+  transition: 0.4s;
+  color: #ff6700;
+  border-bottom: 0; }
 .mainseeMore span:nth-child(n+2) {
   margin-left: 30px; }
 

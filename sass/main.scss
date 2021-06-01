@@ -44,20 +44,8 @@
         font-size: 16px;
         line-height: 58px;
         color: #424242;
-        transition: all .4s;
-    }
-
-    &:hover .main-icon-cart {
-        background: $micolor;
-    }
-
-    &:hover .seeMore {
-        color: $micolor;
-        border: 0;
     }
 }
-
-
 
 .maintitle {
     display: block;
@@ -315,6 +303,18 @@
     span:hover {
         color: #ff6700;
         border-bottom: 2px solid #ff6700;
+    }
+
+    &:hover .main-icon-cart {
+        color:white;
+        background: $micolor;
+        border-bottom:0;        
+    }
+
+    &:hover .seeMoretext {
+        transition: 0.4s;
+        color: $micolor;
+        border-bottom:0;
     }
 
     span:nth-child(n+2) {
