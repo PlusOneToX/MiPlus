@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+@import "header.scss";
+@import "fonts.scss";
+
+.ftservice {
+    border-bottom: 1px solid #e0e0e0;
+
+    ul {
+        padding: 27px 0;
+    }
+
+    li {
+        width: 243px;
+        height: 25px;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        border-left: 1px solid #e0e0e0;
+
+        &:first-child {
+            border: 0;
+        }
+
+        &:hover {
+            a {
+                color: $micolor;
+            }
+        }
+
+        a {
+            color: #616161;
+            transition: color .2s;
+            font-size: 16px;
+            text-align: center;
+            line-height: 25px;
+            display: flex;
+            justify-content: center;
+
+            .fticon-font {
+                font-family: 'icomoon';
+                margin-right: 6px;
+                font-size: 24px;
+                line-height: 25px;
+            }
+        }
+
+    }
+}
+
+.footer-links {
+    width: 1226px;
+    height: 252px;
+    padding-top:40px;
+
+    .ft-nav {
+        float: left;
+        margin-bottom: 14px;
+    }
+
+    dl {
+        width: 160px;
+        display: block;
+        float: left;
+
+        dt {
+            font-size: 14px;
+            line-height: 1.25;
+            color: #424242;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .ft-text {
+            margin: 10px 0 0;
+            font-size: 12px;
+            color: #757575;
+
+            &:hover {
+                color: $micolor;
+            }
+        }
+    }
+}
+
+.ft-contact {
+    float: right;
+    width: 243px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+
+    .phone {
+        font-size: 22px;
+        line-height: 1;
+        color: #ff6700;
+    }
+
+    p {
+        margin: 0 0 5px 0;
+        font-size: 12px;
+    }
+
+    .ft-btn {
+        display: block;
+        width: 118px;
+        height: 28px;
+        color: $micolor;
+        font-size: 12px;
+        line-height: 28px;
+        margin: 0 auto;
+        border: 1px solid $micolor;
+        font-family: 'icomoon';
+        transition: all .4s;
+
+        &:hover {
+            color: #fff;
+            background-color: #f25807;
+            border-color: #f25807;
+        }
+    }
+
+    .follow {
+        font-size: 12px;
+        margin-top: 10px;
+        font-family: 'icomoon';
+        color: #757575;
+        padding-left: 10px;
+        position: relative;
+
+        a {
+            color: #757575;
+            margin-left: 5px;
+            font-size: 20px;
+
+            &:hover {
+                color: $micolor;
+            }
+
+            img {
+                position: absolute;
+                right: 0;
+                width: 126px;
+                height: 126px;
+                z-index: 2;
+                top: 30px;
+                left: 100px;
+                display: none;
+            }
+        }
+
+        .wx:hover img {
+            display: block;
+        }
+
+
+    }
+}

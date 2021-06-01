@@ -3,7 +3,8 @@
 @import "header.scss";
 
 .mmsconter,
-.mipconter {
+.mipconter,
+.footerconter {
     @include conter;
 }
 
@@ -397,8 +398,8 @@
     }
 }
 
-.mivideo {
-    margin-bottom: 28px;
+.mainxmms {
+    padding-bottom: 28px;
 }
 
 .videoli {
