@@ -8,6 +8,10 @@
     @include conter;
 }
 
+.mipconter{
+    background: #f5f5f5;
+}
+
 .banners img {
     width: 1226px;
     margin: 22px 0;
@@ -16,11 +20,6 @@
 .mmsconter,
 .mipconter,
 .mipconter {
-    background: #f5f5f5;
-}
-
-.mainxmms {
-    width: 100%;
     background: #f5f5f5;
 }
 
@@ -399,6 +398,11 @@
 }
 
 .mainxmms {
+    background-color: #f5f5f5;
+}
+
+.mivideo{
+    
     padding-bottom: 28px;
 }
 

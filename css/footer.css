@@ -607,6 +607,9 @@ ul {
     .ft-contact .follow .wx:hover img {
       display: block; }
 
+.footerb {
+  background: #f5f5f5; }
+
 .footerlink {
   background-color: #f5f5f5;
   padding: 30px 0; }
@@ -641,8 +644,8 @@ ul {
     .info-textsm a img {
       height: 28px; }
 
-.ftimg {
-  padding-top: 12px;
+.ftimgconter {
+  padding-top: 40px;
   background: #f5f5f5; }
 
 .ftimgconter {
