@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?ie720a");
+  src: url("../fonts/icomoon.eot?ie720a#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ie720a") format("truetype"), url("../fonts/icomoon.woff?ie720a") format("woff"), url("../fonts/icomoon.svg?ie720a#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+* {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+ul {
+  list-style-type: none;
+  clear: both;
+  margin: 0;
+  padding: 0; }
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .miLeftCimage {
+    width: 200px; }
+
+  .miAccounts {
+    margin-left: 200px; } }
+@media (min-width: 1200px) {
+  .miLeftCimage {
+    width: 375px; }
+
+  .miAccounts {
+    margin-left: 375px; } }
+.miLeftCimage {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+  .miLeftCimage .leftbigimg {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    background: url(../img/LR-img/banner.4994397e.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50%; }
+
+.miAccounts {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh; }
+
+.headertop {
+  padding: 20px; }
+  .headertop .headerlogobox {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    line-height: 40px; }
+    .headertop .headerlogobox .headerlogo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px; }
+
+.headerright a {
+  font-size: 14px;
+  color: #838383;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: color 0.3s; }
+  .headerright a:hover {
+    color: #ff6900; }
+.headerright .algdd {
+  position: relative; }
+  .headerright .algdd .icomoon {
+    font-family: 'icomoon';
+    font-size: 12px; }
+  .headerright .algdd:hover .lg-meun ul {
+    height: 80px; }
+  .headerright .algdd .lg-meun {
+    position: absolute;
+    top: 35px;
+    right: 0; }
+    .headerright .algdd .lg-meun ul {
+      color: rgba(0, 0, 0, 0.65);
+      text-align: center;
+      font-size: 14px;
+      width: 96px;
+      height: 0px;
+      transition: 0.3s;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      overflow: hidden; }
+      .headerright .algdd .lg-meun ul li {
+        transition: all 0.3s;
+        line-height: 40px; }
+        .headerright .algdd .lg-meun ul li:hover {
+          color: #333;
+          background-color: #fff3e6; }
+.headerright .splitline {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 14px;
+  width: 0;
+  border-right: 1px solid #ddd; }
+
+.mi-layout__header {
+  position: relative; }
+
+.LRwindowsbox {
+  position: relative;
+  padding-top: 20px; }
+  .LRwindowsbox .lrsmbox {
+    width: 450px;
+    height: 600px;
+    padding: 40px 45px;
+    margin: 0 auto 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px 0 rgba(164, 164, 164, 0.1); }
+    .LRwindowsbox .lrsmbox .lrtitle a {
+      color: #333;
+      font-weight: 500;
+      font-size: 22px;
+      margin-right: 20px;
+      float: left; }
+    .LRwindowsbox .lrsmbox .lrtitle .signin {
+      position: relative; }
+      .LRwindowsbox .lrsmbox .lrtitle .signin span {
+        position: relative;
+        width: 44px;
+        display: block;
+        border-bottom: 4px solid #ff5c00;
+        border-radius: 2px; }
+    .LRwindowsbox .lrsmbox .lrtitle .signup {
+      color: #bbb; }
+    .LRwindowsbox .lrsmbox .lrnameinpt,
+    .LRwindowsbox .lrsmbox .lrpwdinpt {
+      position: relative; }
+    .LRwindowsbox .lrsmbox .lrinput {
+      padding-top: 40px;
+      padding: 40px 5px 0 5px;
+      margin-bottom: 110px; }
+      .LRwindowsbox .lrsmbox .lrinput .lrpwdinpt,
+      .LRwindowsbox .lrsmbox .lrinput .lrbtn {
+        margin-top: 20px; }
+      .LRwindowsbox .lrsmbox .lrinput input {
+        background: red;
+        padding: 30px 20px 10px;
+        width: 100%;
+        height: 60px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #f9f9f9; }
+        .LRwindowsbox .lrsmbox .lrinput input:focus {
+          border: 1px solid #ff5c00;
+          outline: none;
+          box-shadow: 0 0 0 3px #ffdecc; }
+          .LRwindowsbox .lrsmbox .lrinput input:focus + label {
+            top: 6px;
+            font-size: 12px; }
+      .LRwindowsbox .lrsmbox .lrinput label {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 17px;
+        color: rgba(0, 0, 0, 0.4);
+        line-height: 20px;
+        transition: top 0.15s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.15s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        max-width: calc(100% - 20px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        user-select: none;
+        cursor: text;
+        touch-action: manipulation; }
+      .LRwindowsbox .lrsmbox .lrinput .lrbtn {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 60px;
+        color: #fff;
+        background-color: #ff5c00;
+        border: 0;
+        opacity: 0.4;
+        border-radius: 4px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+        .LRwindowsbox .lrsmbox .lrinput .lrbtn:hover {
+          background-color: #ff7e29; }
+      .LRwindowsbox .lrsmbox .lrinput .lrhelp a {
+        font-size: 17px;
+        color: #ff5c00;
+        transition: color .3s; }
+        .LRwindowsbox .lrsmbox .lrinput .lrhelp a:hover {
+          color: #ff7e29; }
+    .LRwindowsbox .lrsmbox .lromglr {
+      text-align: center; }
+      .LRwindowsbox .lrsmbox .lromglr p {
+        font-size: 17px;
+        font-weight: 400;
+        color: #aaa;
+        line-height: 40px; }
+      .LRwindowsbox .lrsmbox .lromglr div {
+        margin-top: 10px; }
+        .LRwindowsbox .lrsmbox .lromglr div img {
+          margin: 0 12px; }
+  .LRwindowsbox .mi-copyright {
+    width: 100%;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 20px; }
+    .LRwindowsbox .mi-copyright a {
+      color: #999; }
+
+/*# sourceMappingURL=login.css.map */
