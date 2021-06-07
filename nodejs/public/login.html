@@ -146,32 +146,43 @@
         }
         //2.创建请求，打开连接
         xhr.open("get", `mi/login/${miname}&${mipwd}`, true);
+        xhr.setRequestHeader("if-Modified-Since", "0");
         //3.发送请求
         xhr.send();
     }
 
-    window.onload = function () {
-        var inputname = document.querySelector('#miname');
-        var inputpwd = document.querySelector('#mipwd');
+    var inputname = document.querySelector('#miname');
+    var minametext = document.getElementById("minametext");
 
-        var minametext = document.getElementById("minametext");
-        var mipwdtext = document.getElementById("mipwdtext");
+    var inputpwd = document.querySelector('#mipwd');
+    var mipwdtext = document.getElementById("mipwdtext");
+
+    inputname.onfocus = function () {
+        minametext.style.top = "6px";
+        minametext.style.fontSize = "12px";
 
         inputname.onblur = function () {
-            if (this.value != null) {
-                minametext.style.top = "6px";
-                minametext.style.fontSize = "12px";
-            }
-        }
-
-        inputpwd.onblur = function () {
             console.log(this.value);
-            if (this.value != null || this.value != "") {
-                mipwdtext.style.top = "6px";
-                mipwdtext.style.fontSize = "12px";
+            if (this.value == "") {
+                minametext.style.top = "20px";
+                minametext.style.fontSize = "17px";
             }
         }
     }
+
+    inputpwd.onfocus = function () {
+        mipwdtext.style.top = "6px";
+        mipwdtext.style.fontSize = "12px";
+
+        inputpwd.onblur = function () {
+            console.log(this.value);
+            if (this.value == "") {
+                mipwdtext.style.top = "20px";
+                mipwdtext.style.fontSize = "17px";
+            }
+        }
+    }
+
 </script>
 
 </html>

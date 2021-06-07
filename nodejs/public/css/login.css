@@ -168,9 +168,6 @@ ul {
           border: 1px solid #ff5c00;
           outline: none;
           box-shadow: 0 0 0 3px #ffdecc; }
-          .LRwindowsbox .lrsmbox .lrinput input:focus + label {
-            top: 6px;
-            font-size: 12px; }
       .LRwindowsbox .lrsmbox .lrinput label {
         position: absolute;
         left: 20px;
