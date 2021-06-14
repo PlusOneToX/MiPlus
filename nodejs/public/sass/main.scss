@@ -8,7 +8,7 @@
     @include conter;
 }
 
-.mipconter{
+.mipconter {
     background: #f5f5f5;
 }
 
@@ -305,15 +305,15 @@
     }
 
     &:hover .main-icon-cart {
-        color:white;
+        color: white;
         background: $micolor;
-        border-bottom:0;        
+        border-bottom: 0;
     }
 
     &:hover .seeMoretext {
         transition: 0.4s;
         color: $micolor;
-        border-bottom:0;
+        border-bottom: 0;
     }
 
     span:nth-child(n+2) {
@@ -401,8 +401,8 @@
     background-color: #f5f5f5;
 }
 
-.mivideo{
-    
+.mivideo {
+
     padding-bottom: 28px;
 }
 
@@ -476,5 +476,93 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+    }
+}
+
+.home-tool-bar {
+    position: fixed;
+
+    &>a:last-child {
+        margin-top: 14px;
+    }
+
+    a {
+        display: block;
+        margin-top: -1px;
+        background-color: #fff;
+        border: 1px solid #f5f5f5;
+        text-align: center;
+        font-family: 'icomoon';
+        color: #757575;
+        font-size: 20px;
+
+
+        &:hover {
+            color: $micolor;
+        }
+    }
+
+}
+
+@media (min-width:1500px) {
+    .home-tool-bar {
+        right: 0;
+        bottom: 40px;
+
+        a {
+            width: 82px;
+            height: 90px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+
+            &:hover span {
+                color: $micolor;
+            }
+
+            span {
+                display: block;
+                font-size: 14px;
+                color: #757575;
+
+
+            }
+        }
+    }
+}
+
+@media (min-width:1300px) and (max-width:1500px) {
+    .home-tool-bar {
+        left: 50%;
+        right: auto;
+        margin-left: 605px;
+        bottom: 40px;
+        line-height: 42px;
+
+        a {
+            width: 27px;
+            height: 42px;
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:1299px) {
+    .home-tool-bar {
+        right: 0;
+        bottom: 40px;
+
+        a {
+            width: 27px;
+            height: 42px;
+            line-height: 42px;
+
+            span {
+                display: none;
+            }
+        }
     }
 }

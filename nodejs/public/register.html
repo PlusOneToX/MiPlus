@@ -70,20 +70,20 @@
                     <div class="lrinput">
                         <div class="lrnameinpt">
                             <input type="text" id="miname" name="miname" value="">
-                            <label for="miname">邮箱/手机号码/小米ID</label>
+                            <label for="miname">昵称</label>
                         </div>
 
                         <div class="lrpwdinpt">
                             <input type="password" id="mipwd" name="mipwd" value="">
-                            <label for="mipwd">密码</label>
+                            <label for="mipwd">手机号</label>
                         </div>
 
                         <div class="lrsvcinpt">
                             <input type="text" id="misvc" name="misvc" value="">
-                            <label for="misvc">短信验证码</label>
+                            <label for="misvc">密码</label>
                         </div>
 
-                        <button class="lrbtn" onclick="login()">登录</button>
+                        <button class="lrbtn" onclick="register()">注册</button>
 
                         <div class="lrhelp d-flex justify-content-between">
                             <a href="">收不到验证码？</a>
@@ -125,38 +125,81 @@
 </body>
 
 <script>
-    function login() {
-        //0.获取用户输入的信息
-        var miname = document.getElementById("miname").value;
-        var mipwd = document.getElementById("mipwd").value;
-        if (!miname) {
-            alert("用户名不能为空！！");
-            return;
-        }
-        if (!mipwd) {
-            alert("密码不能为空！！");
-            return;
-        }
-        //1.创建xhr异步对象
-        var xhr = new XMLHttpRequest();
-        //4.打开监听，接收响应
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var r = xhr.responseText;
-                if (r == 1) {
-                    alert("登录成功");
-                    //js跳转页面的写法
-                    location.href = "http://127.0.0.1:8080/index.html";
-                } else {
-                    alert("邮箱/手机号码/小米ID或密码错误");
+    function register() {
+
+        var isEx = false;
+
+        function login() {
+            if (!isEx) {
+                alert("请重新选用户名");
+                return;
+            }
+            //0.获取用户输入的信息
+            var miname = document.getElementById("miname").value;
+            var mipwd = document.getElementById("mipwd").value;
+            if (!_uname) {
+                alert("用户名不能为空！！");
+                return;
+            }
+            if (!_upwd) {
+                alert("密码不能为空！！");
+                return;
+            }
+            //1.创建xhr异步对象
+            var xhr = new XMLHttpRequest();
+            //4.打开监听，接收响应
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var r = xhr.responseText;
+                    if (r == 1) {
+                        alert("注册成功");
+                        //js跳转页面的写法
+                        location.href = "http://127.0.0.1:8080/pro_list.html"
+                    } else {
+                        alert("用户名或密码错误");
+                    }
                 }
             }
+            //2.创建请求，打开连接
+            xhr.open("post", `/pro/v1/ref`, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            //3.发送请求
+            xhr.send(`uname=${_uname}&upwd=${_upwd}`);
         }
-        //2.创建请求，打开连接
-        xhr.open("get", `mi/login/${miname}&${mipwd}`, true);
-        xhr.setRequestHeader("if-Modified-Since", "0");
-        //3.发送请求
-        xhr.send();
+
+        function isExists() {
+            console.log(11);
+            ///v1/isexists
+            //0.获取用户输入的信息
+            var _uname = uname.value;
+            if (!_uname) {
+                alert("用户名不能为空！！");
+                return;
+            }
+            //1.创建xhr异步对象
+            var xhr = new XMLHttpRequest();
+            //4.打开监听，接收响应
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var r = xhr.responseText;
+                    if (r == 1) {
+                        alert("该用户名己存在");
+                        isEx = false;
+                        //js跳转页面的写法
+                        //location.href="http://127.0.0.1:8080/pro_list.html"
+                    } else {
+                        alert("欢迎使用");
+                        isEx = true;
+                    }
+                }
+            }
+            //2.创建请求，打开连接
+            xhr.open("get", `/pro/v1/isexists?uname=${_uname}`, true);
+            //3.发送请求
+            xhr.send();
+
+        }
     }
 
     var inputname = document.querySelector('#miname');
@@ -164,6 +207,9 @@
 
     var inputpwd = document.querySelector('#mipwd');
     var mipwdtext = document.getElementsByTagName("label")[1];
+
+    var inputsvc = document.querySelector('#misvc');
+    var misvctext = document.getElementsByTagName("label")[2];
 
     inputname.onfocus = function () {
         minametext.style.top = "6px";
@@ -187,6 +233,19 @@
             if (this.value == "") {
                 mipwdtext.style.top = "20px";
                 mipwdtext.style.fontSize = "17px";
+            }
+        }
+    }
+
+    inputsvc.onfocus = function () {
+        misvctext.style.top = "6px";
+        misvctext.style.fontSize = "12px";
+
+        this.onblur = function () {
+            console.log(this.value);
+            if (this.value == "") {
+                misvctext.style.top = "20px";
+                misvctext.style.fontSize = "17px";
             }
         }
     }

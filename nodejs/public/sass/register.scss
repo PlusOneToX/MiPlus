@@ -231,7 +231,8 @@ $micolor:#ff6900;
         }
 
         .lrnameinpt,
-        .lrpwdinpt {
+        .lrpwdinpt,
+        .lrsvcinpt {
             position: relative;
         }
 
@@ -239,8 +240,22 @@ $micolor:#ff6900;
             padding-top: 40px;
             padding: 40px 5px 0 5px;
 
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                color: #aaa;
+                line-height: 20px;
+                text-align: center;
+                padding-bottom: 10px;
+
+                span {
+                    color: #333;
+                }
+            }
+
             .lrpwdinpt,
-            .lrbtn {
+            .lrbtn,
+            .lrsvcinpt {
                 margin-top: 20px;
             }
 
@@ -296,6 +311,8 @@ $micolor:#ff6900;
             }
 
             .lrhelp {
+                margin-bottom: 10px;
+
                 a {
                     font-size: 17px;
                     color: #ff5c00;

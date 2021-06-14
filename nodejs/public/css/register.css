@@ -146,13 +146,24 @@ ul {
     .LRwindowsbox .lrsmbox .lrtitle .signin {
       color: #bbb; }
     .LRwindowsbox .lrsmbox .lrnameinpt,
-    .LRwindowsbox .lrsmbox .lrpwdinpt {
+    .LRwindowsbox .lrsmbox .lrpwdinpt,
+    .LRwindowsbox .lrsmbox .lrsvcinpt {
       position: relative; }
     .LRwindowsbox .lrsmbox .lrinput {
       padding-top: 40px;
       padding: 40px 5px 0 5px; }
+      .LRwindowsbox .lrsmbox .lrinput p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #aaa;
+        line-height: 20px;
+        text-align: center;
+        padding-bottom: 10px; }
+        .LRwindowsbox .lrsmbox .lrinput p span {
+          color: #333; }
       .LRwindowsbox .lrsmbox .lrinput .lrpwdinpt,
-      .LRwindowsbox .lrsmbox .lrinput .lrbtn {
+      .LRwindowsbox .lrsmbox .lrinput .lrbtn,
+      .LRwindowsbox .lrsmbox .lrinput .lrsvcinpt {
         margin-top: 20px; }
       .LRwindowsbox .lrsmbox .lrinput input {
         background: red;
@@ -195,12 +206,14 @@ ul {
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
         .LRwindowsbox .lrsmbox .lrinput .lrbtn:hover {
           background-color: #ff7e29; }
-      .LRwindowsbox .lrsmbox .lrinput .lrhelp a {
-        font-size: 17px;
-        color: #ff5c00;
-        transition: color .3s; }
-        .LRwindowsbox .lrsmbox .lrinput .lrhelp a:hover {
-          color: #ff7e29; }
+      .LRwindowsbox .lrsmbox .lrinput .lrhelp {
+        margin-bottom: 10px; }
+        .LRwindowsbox .lrsmbox .lrinput .lrhelp a {
+          font-size: 17px;
+          color: #ff5c00;
+          transition: color .3s; }
+          .LRwindowsbox .lrsmbox .lrinput .lrhelp a:hover {
+            color: #ff7e29; }
     .LRwindowsbox .lrsmbox .lromglr {
       text-align: center; }
       .LRwindowsbox .lrsmbox .lromglr p {
