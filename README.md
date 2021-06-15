@@ -10,6 +10,8 @@
 <br>
 <b>数据库：</b>xampp-control > MySQL
 <br><br>
+<b>上手指南</b><br>
+以下指南将帮助你在本地机器上安装和运行该项目，进行开发和测试。关于如何将该项目部署到在线环境，请参考部署小节。<br><br>
 <b>准备工作</b><br>
 xampp-control > 运行SQL文件<br>
 nodejs > cmd窗口运行app.js
