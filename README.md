@@ -1,6 +1,7 @@
 # MiPlus
 
 项目：仿小米官网
+<br>
 开发工具：Visual Studio Code
 开发语言：HTML+Sass+javaScript
 框架工具：Bootstrap框架
