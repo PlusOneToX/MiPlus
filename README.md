@@ -15,6 +15,7 @@ xampp-control > 运行SQL文件<br>
 nodejs > cmd窗口运行app.js
 <br><br>
 <b>页面</b><br>
+<b>URL:</b>MiPlus/nodejs/public/<br>
 <b>首页</b> -- index.html<br>
 <b>登录</b> -- login.html<br>
 <b>注册</b> -- register.html<br>
