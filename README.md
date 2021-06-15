@@ -2,24 +2,24 @@
 
 <b>项目：</b>仿小米官网
 <br>
-开发工具：Visual Studio Code
+<b>开发工具：</b>Visual Studio Code
 <br>
-开发语言：HTML+Sass+javaScript
+<b>开发语言：</b>HTML+Sass+javaScript
 <br>
-框架工具：Bootstrap框架
+<b>框架工具：</b>Bootstrap框架
 <br>
-数据库：xampp-control > MySQL
+<b>数据库：</b>xampp-control > MySQL
 <br><br>
-准备工作<br>
+<b>准备工作</b><br>
 xampp-control > 运行SQL文件<br>
 nodejs > cmd窗口运行app.js
 <br><br>
-页面<br>
-首页 -- index.html<br>
-登录 -- login.html<br>
-注册 -- register.html<br>
-APP下载 -- appdownload.html<br>
-购物车 -- buy_cart.html<br>
-小米秒杀 -- buy_seckill.html<br>
+<b>页面</b><br>
+<b>首页</b> -- index.html<br>
+<b>登录</b> -- login.html<br>
+<b>注册</b> -- register.html<br>
+<b>APP下载</b> -- appdownload.html<br>
+<b>购物车</b> -- buy_cart.html<br>
+<b>小米秒杀</b> -- buy_seckill.html<br>
 <br><br>
-作者:YJCS-J
+<b>作者:</b>YJCS-J
