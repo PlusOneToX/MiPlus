@@ -1,6 +1,6 @@
 # MiPlus
 
-项目：仿小米官网
+<b>项目：</b>仿小米官网
 <br>
 开发工具：Visual Studio Code
 <br>
@@ -12,7 +12,7 @@
 <br><br>
 准备工作<br>
 xampp-control > 运行SQL文件<br>
-nodejs > cmd窗口运行app.js<br>
+nodejs > cmd窗口运行app.js
 <br><br>
 页面<br>
 首页 -- index.html<br>
